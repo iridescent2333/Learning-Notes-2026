@@ -1,0 +1,31 @@
+今天是清明节，但是在学校闲的没事做的我还是决定学习一下编程，
+计划先把python熟悉一下，再学习一下数据库原理MySQL
+
+#Python#
+基础概念
+元组()
+列表[]
+字典{"A":n,}
+/*eg:打印字典
+for key, value in d1.items():
+    print(f"{key}:{value}")
+*/
+基础函数
+.strip('') /*滤掉某个字符
+.lower() .upper() /*全部转为大写或小写
+.count('') /*计数字符个数
+.replace('A','B') /*替换字符'A'为'B'
+.split('') /*以该字符为参考分割字符串为列表
+.('A'*n).join(B)  /*将n个字符'A'插入字符串B中
+.len() /*计算字符串或列表长度
+.sort(reverse=True) /*对字符串进行排序，True为降序，False为升序
+.append('') /*在列表末尾添加元素
+.pop(n) /*消除列表中下标为n的元素
+range() /*前包后不包
+A.update(B) /*将字典B合并进字典A中
+基础库
+import string
+/*eg:替换标点符号为空格
+for punct in string.punctuation:
+    A=A.replace(punct,' ')
+*/
