@@ -1,1 +1,0 @@
-- docker，使用github账号登录，配置hadoop，
