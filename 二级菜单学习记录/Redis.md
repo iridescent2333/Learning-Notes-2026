@@ -4,15 +4,12 @@
 - 图形化界面，**Another Redis Desktop Manager**，基本使用
 - Redis存储的是key-value结构的数据，其中key是字符串类型，value有5种常用的数据类型：字符串string，哈希hash，列表list，集合set，有序集合sorted set/zset
 ### 常用命令
-- #### 字符串string
-`SET key value`设置指定key的值，`GET key`获取指定key的值，`SETEX key seconds value`设置指定key的值，并将key的过期时间设为seconds秒，`SETNX key value`只有在key不存在时设置key的值
-- #### 哈希hash
-`HSET key field value`将哈希表key中的字段 field 的值设为value，`HGET key field`获取存储在哈希表中指定字段的值，`HDEL key field`删除存储在哈希表中的指定字段，`HKEYS key`获取哈希表中所有字段，`HVALS key`获取哈希表中所有值
-- #### 列表list
-`LPUSH key value1 [value2]`将一个或多个值插入到列表头部，`LRANGE key start stop`获取列表指定范围内的元素，`RPOP key`移除并获取列表最后一个元素，`LLEN key`获取列表长度
-- #### 集合set
-`SADD keymember1[member2]`向集合添加一个或多个成员，`SMEMBERS key`返回集合中的所有成员，`SCARD key`获取集合的成员数，`SINTER key1 [key2]`返回给定所有集合的交集，`SUNION key1 [key2]`返回所有给定集合的并集，`SREM key member1 [member2]`删除集合中一个或多个成员
-- #### 有序集合zset
-`ZADD key score1 member1 [score2 member2]`向有序集合添加一个或多个成员，`ZRANGE key start stop [WITHSCORES]`通过索引区间返回有序集合中指定区间内的成员，`ZINCRBY key increment member`有序集合中对指定成员的分数加上增量，`incrementZREM key member [member...]`移除有序集合中的一个或多个成员
-- #### 通用命令
-`KEYS pattern`查找所有符合给定模式(pattern)的key，`EXISTS key`检查给定 key是否存在，`TYPE key`返回key所储存的值的类型，`DEL key`该命令用于在key存在是删除key
+| 数据类型 | 常用命令1 | 常用命令2 | 常用命令3 | 常用命令4 | 常用命令5 | 常用命令6 |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| string（字符串） | `SET key value`<br>设置指定key的值 | `GET key`<br>获取指定key的值 | `SETEX key seconds value`<br>设置值并指定过期秒数 | `SETNX key value`<br>key不存在才设置 | — | — |
+| hash（哈希） | `HSET key field value`<br>设置哈希表字段值 | `HGET key field`<br>获取哈希指定字段值 | `HDEL key field`<br>删除哈希指定字段 | `HKEYS key`<br>获取哈希所有字段名 | `HVALS key`<br>获取哈希所有字段值 | — |
+| list（列表） | `LPUSH key value1 [value2]`<br>列表头部插入元素 | `LRANGE key start stop`<br>获取区间内元素 | `RPOP key`<br>移除并返回尾部元素 | `LLEN key`<br>获取列表长度 | — | — |
+| set（集合） | `SADD key member1 [member2]`<br>添加集合成员 | `SMEMBERS key`<br>返回集合全部成员 | `SCARD key`<br>获取集合成员数量 | `SINTER key1 [key2]`<br>求集合交集 | `SUNION key1 [key2]`<br>求集合并集 | `SREM key member1 [member2]`<br>删除集合成员 |
+| zset（有序集合） | `ZADD key score1 member1 [score2 member2]`<br>添加有序集合成员 | `ZRANGE key start stop [WITHSCORES]`<br>按索引区间查询 | `ZINCRBY key increment member`<br>成员分数增加增量 | `ZREM key member [member...]`<br>移除有序集合成员 | — | — |
+| 通用命令 | `KEYS pattern`<br>按模式查找key | `EXISTS key`<br>检查key是否存在 | `TYPE key`<br>查看key存储类型 | `DEL key`<br>删除存在的key | — | — |
+
