@@ -23,5 +23,3 @@
 - 4.通过RedisTemplate对象操作Redis
 - 需要配置序列化器，防止乱码和不能正常显示，RedisTemplate 默认使用 JDK 序列化，key/value 都会序列化为二进制，存入 redis 带特殊前缀，可视化工具看不到明文 key，优点：支持对象直接存入；缺点：key 可读性差、占用空间大
 StringRedisSerializer：key、value 以原始字符串存储，可视化工具可以直接查看，适合存储字符串
-- 修改resources里面的配置文件而不是target里面的的文件，后者为maven自动生成，禁止修改，学习过程中犯的一个错误，
-- Redis配置文件不设置密码，问题没有解决，测试Redis没有反应，没有连接成功，
