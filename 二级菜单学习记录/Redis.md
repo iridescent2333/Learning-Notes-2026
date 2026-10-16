@@ -3,7 +3,7 @@
 - 下载与安装，略，redis.conf，配置文件，redis-cli.exe，命令行，redis-server.exe，服务器，默认端口号6379，本地，连接云端，`redis-cli.exe -h localhost -p 6379 -a 123456`，默认没有配置密码，不需要用户名，设置密码，conf配置文件找到`# requirepass foobared`改为`requirepass 123456`
 - 图形化界面，**Another Redis Desktop Manager**，熟悉基本使用
 - Redis存储的是key-value结构的数据，其中key是字符串类型，value有5种常用的数据类型：字符串string，哈希hash，列表list，集合set，有序集合sorted set/zset，Redis有序集合是string类型元素的集合，且不允许有重复成员。每个元素都会关联一个double类型的分数，score大者在前
-- 有效时间/秒，TTL，-ex，设置时间，-nx，不存在执行成功并返回1，列表头插入，双端队列，
+- 有效时间/秒，TTL，-ex，设置时间，-nx，不存在执行成功并返回1，列表头插入，双端队列，命令和SQL一样不区分大小写
 ### 常用命令
 
 | 数据类型 | 常用命令1 | 常用命令2 | 常用命令3 | 常用命令4 | 常用命令5 | 常用命令6 |
