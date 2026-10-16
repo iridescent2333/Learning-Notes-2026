@@ -1,1 +1,3 @@
-
+- **Redis**，基于内存的key-value结构数据库，读写性能高，适合储存热点数据，处理短期的大量请求，对SQL的补充，[Redis中文网站](https://www.redis.net.cn/)
+- 下载与安装，略，redis.conf，配置文件，redis-cli.exe，命令行，redis-server.exe，服务端，默认端口号6379，本地，连接云端，`redis-cli.exe -h localhost -p 6379 -a 123456`，默认没有配置密码，不需要用户名，设置密码，conf配置文件找到`# requirepass foobared`改为`requirepass 123456`
+- 图形化界面，**Another Redis Desktop Manager**，
