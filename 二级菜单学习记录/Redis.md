@@ -19,7 +19,9 @@
 - **Spring Data Redis**，使用方法：
 - 1.导入SpringData Redis 的maven坐标
 - 2.配置Redis数据源
-- 3.编写配置类，创建RedisTemplate对象
+- 3.编写配置类，创建**RedisTemplate**对象
 - 4.通过RedisTemplate对象操作Redis
-- 需要配置序列化器，防止乱码和不能正常显示，RedisTemplate 默认使用 JDK 序列化，key/value 都会序列化为二进制，存入 redis 带特殊前缀，可视化工具看不到明文 key，优点：支持对象直接存入；缺点：key 可读性差、占用空间大
+- 需要配置**序列化器**(KeySerializer,ValueSerializer,HashKeySerializer,HashValueSerializer,四个，key序列化所有数据类型都是KeySerializer，其中哈希内容元素序列化field对应HashKeySerializer，value对应HashValueSerializer)，防止乱码和不能正常显示
+- RedisTemplate 默认使用 JDK 序列化，key/value 都会序列化为二进制，存入 redis 带特殊前缀，可视化工具看不到明文 key，优点：支持对象直接存入；缺点：key 可读性差、占用空间大
 StringRedisSerializer：key、value 以原始字符串存储，可视化工具可以直接查看，适合存储字符串
+- 依次测试test字符串，哈希，列表，集合和有序集合的各种常用指令，
